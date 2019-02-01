@@ -1,0 +1,23 @@
+<p>
+  Mundu, login avvu bangaram!
+</p>
+<div>
+  <table>
+    <tr>
+      <td><label>userid </label></td>
+      <td><input type="text" [(ngModel)]="userid" value={{userid}}></td>
+    </tr>
+    <tr>
+      <td><label>Password: </label></td>
+      <td><input type="password" name="password" [(ngModel)]="password" value={{password}}></td>
+    </tr>
+    <tr>
+      <td><button type="submit" (click)="validateLogin()" >Login</button></td>
+      <td>Or please <a href="/register">Register</a></td>
+    </tr>
+  </table>
+  {{userid}} - {{password}}
+
+</div>
+
+

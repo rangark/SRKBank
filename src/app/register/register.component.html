@@ -1,0 +1,30 @@
+<p>
+  Ikkada Register avvu bangaram!
+</p>
+<div>
+    <table>
+      <tr>
+        <td><label>UserId: </label></td>
+        <td><input type="text" [(ngModel)]="userid"></td>
+      </tr>
+      <tr>
+          <td><label>Email: </label></td>
+          <td><input type="text" [(ngModel)]="emailid"></td>
+        </tr>
+        <tr>
+        <td><label>Password: </label></td>
+        <td><input type="password" [(ngModel)]="password"></td>
+      </tr>
+      <tr>
+          <td><label>Confirm Password: </label></td>
+          <td><input type="password" [(ngModel)]="cPassword"></td>
+        </tr>
+        <tr>
+        <td><button type="submit" (click)="registerUser()">Register</button></td>
+        <td>Or please <a href="/login">Login</a></td>
+      </tr>
+    </table>
+    
+  
+  </div>
+  
