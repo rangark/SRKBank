@@ -1,7 +1,44 @@
 <p>
     {{userid}} ({{email}}), nee accounts summary:
 </p>
+
+<input type="date" name="search" [(ngModel)] ="search12" #search="ngModel" required>
+<div *ngIf = "search.touched">Search touched</div>
+<div *ngIf = "search.dirty">Search dirty</div>
+<div *ngIf = "search.invalid">Search invalid</div>
+<div *ngIf = "search.pristine">Search pristine</div>
+
+<!--<table  border="1" *ngIf= "data" width="400">
+    <thead><th>S.No</th><th>Name</th><th>age</th><th>Gender</th></thead>
+      <tr  *ngFor ="let d of data; index as i"><td>{{i}}</td><td>{{d.name | uppercase}}</td>
+        <td>{{d.age | currency}}</td><td>{{d.gender | lowercase}}</td>
+        <td>{{d.dob| date: "MM/dd/yy"}}</td>
+        {{d | json}}
+      </tr>
+    </table>-->
+
+<table  border="1" *ngIf= "datafromExtrnalSource" width="600">
+    <thead><th>S.No</th><th>Id</th><th>Title</th><th>Userr ID</th><th>Status</th><th>Remarks</th></thead>
+    <div  *ngFor ="let d of datafromExtrnalSource; index as i; first as isFirstItem; last as isLastItem; even as isEvenItem; odd as isOddItem">
+    <tr>
+      <!-- <div *ngIf="i<10"> -->
+      <td>{{i}}</td>
+      <td><a href="#">{{d.id }}</a></td>
+      <td>{{d.title }}</td>
+      <td>{{d.userId }}</td>
+      <td>{{d.completed}}</td>
+      <td>
+        <span *ngIf="isFirstItem">Frist result</span>
+        <span *ngIf="isLastItem">Last result</span>
+        <span *ngIf="isEvenItem">Even result</span>
+        <span *ngIf="isOddItem">Odd result</span>
+      </td>
+      <!-- </div> -->
+    </tr>
+    </div>
+</table>
 <div>
+
   
   <table border="1">
     <tr>
